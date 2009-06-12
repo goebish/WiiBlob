@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1.0">
+	<name> Blobby Volley</name>
+	<version>0.01</version>
+	<coder>Goebish</coder>
+        <release_date>200906130000</release_date>
+	<short_description>Blobby Volley</short_description>
+	<long_description>Blobby volley is a really fun and addictive volley ball game. Basically you are a little blob that plays volley ball. You sort of look like a squishy jelly bean. Each player (Blob) can be controlled either by the player or the computer. So you can play against an AI opponent or a friend.</long_description>
+</app>
