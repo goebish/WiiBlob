@@ -73,10 +73,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\source\state\NetworkState.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\source\state\OptionsState.cpp"
 				>
 			</File>
