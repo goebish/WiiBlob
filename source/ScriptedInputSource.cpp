@@ -242,6 +242,7 @@ int ScriptedInputSource::debug(lua_State* state)
 {
 	float number = lua_tonumber(state, -1);
 	lua_pop(state, 1);
+	printf("\x1b[2;0H");
 	std::cerr << "Lua Debug: " << number << std::endl;
 	return 0;
 }
