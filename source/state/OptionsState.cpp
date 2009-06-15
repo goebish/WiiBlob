@@ -43,7 +43,7 @@ OptionState::OptionState()
 	
 	
 	// goebish
-	char* filenames[]={"tutorial.lua","hyp014.lua","union.lua","\0"};
+	const char* filenames[]={"tutorial.lua","hyp014.lua","union.lua","\0"};
 	
 	for (int i = 0; i<3 /*filenames[i] != 0*/; ++i)
 	{
@@ -752,8 +752,10 @@ MiscOptionsState::MiscOptionsState()
 	mOptionConfig.loadFile("SD:/data/config.xml");
 	std::string currentBackground = mOptionConfig.getString("background");
 	mBackground = -1;
-	char** filenames = PHYSFS_enumerateFiles("SD:/data/backgrounds");
-	for (int i = 0; filenames[i] != 0; ++i)
+	//char** filenames = PHYSFS_enumerateFiles("SD:/data/backgrounds");
+	
+	const char* filenames[] = {"strand1.bmp","strand2.bmp","\0"};
+	for (int i = 0; i<2 /*filenames[i] != 0*/; ++i)
 	{
 		std::string tmp(filenames[i]);
 		if (tmp.find(".bmp") != std::string::npos)
@@ -764,7 +766,7 @@ MiscOptionsState::MiscOptionsState()
 				mBackground = pos;
 		}
 	}
-	PHYSFS_freeList(filenames);
+	//PHYSFS_freeList(filenames);
 	mShowFPS = mOptionConfig.getBool("showfps");
 	mShowBlood = mOptionConfig.getBool("blood");
 	mVolume = mOptionConfig.getFloat("global_volume");
