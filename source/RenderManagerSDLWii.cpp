@@ -17,6 +17,9 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 =============================================================================*/
 
+// goebish todo: find correct blobs, shadows and ball +x decals for 0.8 ratio (see bug #5 on assembla)
+
+
 #include <iostream>
 #include "physfs.h"
 #include "RenderManagerSDLWii.h"
