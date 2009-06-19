@@ -17,16 +17,16 @@ include $(DEVKITPPC)/wii_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build
-SOURCES		:=	source source/tinyxml source/state source/lua
+SOURCES		:=	source source/tinyxml source/state source/lua source/raknet
 DATA		:=	data  
-INCLUDES	:=  include include/tinyxml include/state include/lua
+INCLUDES	:=  include include/tinyxml include/state include/lua include/raknet
 
 #---------------------------------------------------------------------------------
 # options for code generation
 #---------------------------------------------------------------------------------
 
-#replace -O0 with -O2 for release
-CFLAGS	= -g -O2 -Wall $(MACHDEP) $(INCLUDE)
+#replace -g -O0 with -O2 for release
+CFLAGS	= -O3 -Wall $(MACHDEP) $(INCLUDE)
 CXXFLAGS	=	$(CFLAGS)
 
 LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
@@ -130,6 +130,9 @@ $(OUTPUT).elf: $(OFILES)
 # This rule links in binary data with the .jpg extension
 #---------------------------------------------------------------------------------
 %.jpg.o	:	%.jpg
+%.bmp.o :	%.bmp
+%.png.o :	%.png
+
 #---------------------------------------------------------------------------------
 	@echo $(notdir $<)
 	$(bin2o)
