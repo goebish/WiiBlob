@@ -113,7 +113,7 @@ PlayerInput InputManager::getGameInput(int player)
 {
 	assert (player >= 0 && player < 2);
 	
-	if(player==0)
+	//if(player==0)
 	{
 		WPAD_ScanPads();
 		u32 held = WPAD_ButtonsHeld(player);
